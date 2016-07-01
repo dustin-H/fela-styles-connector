@@ -1,6 +1,6 @@
 {
   "name": "fela-styles-connector",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Allows to connect a fela styles object to a react component",
   "main": "index.js",
   "files": [
