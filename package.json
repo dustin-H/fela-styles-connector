@@ -1,6 +1,6 @@
 {
   "name": "fela-styles-connector",
-  "version": "1.0.0",
+  "version": "5.0.0",
   "description": "Allows to connect a fela styles object to a react component",
   "main": "index.js",
   "files": [
@@ -35,10 +35,6 @@
     ]
   },
   "homepage": "https://github.com/dustin-H/fela-styles-connector#readme",
-  "peerDependencies": {
-    "react-fela": "^2.0.1",
-    "fela-stylesheet": "^1.0.2"
-  },
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
