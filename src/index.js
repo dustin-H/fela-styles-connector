@@ -1,11 +1,15 @@
 import { connect } from 'react-fela'
-import { StyleSheet } from 'fela-tools'
 
 export default styles => {
-  const stylesheet = StyleSheet.create(styles)
-  const mapStylesToProps = props => renderer => Object.keys(stylesheet).reduce((rules, rule) => {
-    rules[rule] = renderer.renderRule(stylesheet[rule], props)
-    return rules
-  }, {})
-  return connect(mapStylesToProps)
+  var rules = Object.keys(styles).map((key) => {
+    var value = styles[key]
+    if(typeof value === 'function'){
+      return value
+    } else {
+      return () => {
+        return value
+      }
+    }
+  })
+  return connect(rules)
 }

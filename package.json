@@ -1,6 +1,6 @@
 {
   "name": "fela-styles-connector",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Allows to connect a fela styles object to a react component",
   "main": "index.js",
   "files": [
@@ -42,5 +42,8 @@
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13"
+  },
+  "dependencies": {
+    "react-fela": "^6.0.0"
   }
 }
