@@ -1,15 +1,21 @@
 import { connect } from 'react-fela'
 
 export default styles => {
-  var rules = Object.keys(styles).map((key) => {
-    var value = styles[key]
-    if(typeof value === 'function'){
-      return value
+
+  var getRule = (style) => {
+    if(typeof style === 'function') {
+      return style
     } else {
       return () => {
-        return value
+        return style
       }
     }
-  })
+  }
+
+  var rules = {}
+  for(var i in styles) {
+    rules[i] = getRule(styles[i])
+  }
+
   return connect(rules)
 }
